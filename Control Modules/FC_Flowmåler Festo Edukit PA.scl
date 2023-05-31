@@ -1,0 +1,48 @@
+﻿FUNCTION "FC_Flowmåler Festo Edukit PA" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Analog_input : Int;   // Analog output 0..27648
+   END_VAR
+
+   VAR_OUTPUT 
+      "Flow [l/h]" : Real;   // Flow l/h 
+   END_VAR
+
+   VAR_TEMP 
+      temp : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      minNorm_int : Int := 0;
+      maxNorm_int : Int := 27648;
+      minScale_real : Real := 0.0;
+      maxScale_real : Real := 100.0;
+   END_VAR
+
+
+BEGIN
+	(*
+	norm and scale for flow sensor on EDUKIT PA
+	0..10V 0..400 mbar
+	*)
+	
+	#temp:=NORM_X_REAL(MIN := #minNorm_int, VALUE := #Analog_input, MAX := #maxNorm_int);
+	#"Flow [l/h]" := 463.9 * #temp - 7.8427;
+	IF #"Flow [l/h]" < 0.0 THEN
+	    #"Flow [l/h]" := 0;
+	END_IF;
+	(*
+	measurements
+	norm[%] l/h
+	0,275   120
+	0,320   140
+	0,361   160
+	0,405   180
+	
+	y = 463,9x - 7,8427
+	R² = 0,9997
+	
+	*)
+END_FUNCTION
+
