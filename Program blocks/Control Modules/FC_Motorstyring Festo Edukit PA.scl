@@ -1,0 +1,39 @@
+﻿FUNCTION "FC_Motorstyring Festo Edukit PA" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      "Power [%]" : Real;   // Power 0.0..100.0% 
+   END_VAR
+
+   VAR_OUTPUT 
+      Analog_out : Int;   // Analog output 0..27648
+   END_VAR
+
+   VAR_TEMP 
+      normPower : Real;   // Norm value 0.0..1.0
+   END_VAR
+
+   VAR CONSTANT 
+      minNorm_real : Real := 0.0;
+      maxNorm_real : Real := 100.0;
+      minScale_int : Int := 0;
+      maxScale_int : Int := 27648;
+   END_VAR
+
+
+BEGIN
+	(*
+	norm and scale for motor controller on EDUKIT PA
+	0.0..100.0%
+	*)
+	
+	
+	#Analog_out := SCALE_X_INT(
+	                           MIN := #minScale_int,
+	                           VALUE :=NORM_X_REAL(
+	                                                MIN := #minNorm_real,
+	                                                VALUE := #"Power [%]",
+	                                                MAX := #maxNorm_real),
+	                           MAX := #maxScale_int);
+END_FUNCTION
+
