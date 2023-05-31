@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2023-05-31T13:25:23.0349907Z</Created>
+    <Created>2023-05-31T14:08:48.0302768Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -46,12 +46,12 @@
   </Section>
   <Section Name="Output">
     <Member Name="output_startMotor" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
-    <Member Name="output_motorPower [%]" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="output_motorPower [int]" Datatype="Int" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
     <Member Name="output_valve" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
   </Section>
   <Section Name="InOut" />
   <Section Name="Static">
-    <Member Name="startMotor" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="startMotor" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><StartValue>true</StartValue></Member>
     <Member Name="motorPower [%]" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><StartValue>85.0</StartValue></Member>
     <Member Name="valve" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
     <Member Name="Flow [l/h]" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
@@ -59,6 +59,7 @@
     <Member Name="pressure [psi]" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
     <Member Name="level [l]" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
     <Member Name="step" Datatype="Array[0..20] of Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="PID_compact" Datatype="PID_Compact" Version="2.3" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="Setpoint" Datatype="Real" /><Member Name="Input" Datatype="Real" /><Member Name="Input_PER" Datatype="Int" /><Member Name="Disturbance" Datatype="Real" /><Member Name="ManualEnable" Datatype="Bool" /><Member Name="ManualValue" Datatype="Real" /><Member Name="ErrorAck" Datatype="Bool" /><Member Name="Reset" Datatype="Bool" /><Member Name="ModeActivate" Datatype="Bool" /></Section><Section Name="Output"><Member Name="ScaledInput" Datatype="Real" /><Member Name="Output" Datatype="Real" /><Member Name="Output_PER" Datatype="Int" /><Member Name="Output_PWM" Datatype="Bool" /><Member Name="SetpointLimit_H" Datatype="Bool" /><Member Name="SetpointLimit_L" Datatype="Bool" /><Member Name="InputWarning_H" Datatype="Bool" /><Member Name="InputWarning_L" Datatype="Bool" /><Member Name="State" Datatype="Int" /><Member Name="Error" Datatype="Bool" /><Member Name="ErrorBits" Datatype="DWord" /></Section><Section Name="InOut"><Member Name="Mode" Datatype="Int" /></Section><Section Name="Static"><Member Name="InternalDiagnostic" Datatype="DWord" /><Member Name="InternalVersion" Datatype="DWord" /><Member Name="InternalRTVersion" Datatype="DWord" /><Member Name="IntegralResetMode" Datatype="Int" /><Member Name="OverwriteInitialOutputValue" Datatype="Real" /><Member Name="RunModeByStartup" Datatype="Bool" /><Member Name="LoadBackUp" Datatype="Bool" /><Member Name="SetSubstituteOutput" Datatype="Bool" /><Member Name="PhysicalUnit" Datatype="Int" /><Member Name="PhysicalQuantity" Datatype="Int" /><Member Name="ActivateRecoverMode" Datatype="Bool" /><Member Name="Warning" Datatype="DWord" /><Member Name="WarningInternal" Datatype="DWord" /><Member Name="Progress" Datatype="Real" /><Member Name="CurrentSetpoint" Datatype="Real" /><Member Name="CancelTuningLevel" Datatype="Real" /><Member Name="SubstituteOutput" Datatype="Real" /><Member Name="Config" Datatype="PID_CompactConfig" Version="1.2"><Sections><Section Name="None"><Member Name="InputPerOn" Datatype="Bool" /><Member Name="InvertControl" Datatype="Bool" /><Member Name="InputUpperLimit" Datatype="Real" /><Member Name="InputLowerLimit" Datatype="Real" /><Member Name="InputUpperWarning" Datatype="Real" /><Member Name="InputLowerWarning" Datatype="Real" /><Member Name="OutputUpperLimit" Datatype="Real" /><Member Name="OutputLowerLimit" Datatype="Real" /><Member Name="SetpointUpperLimit" Datatype="Real" /><Member Name="SetpointLowerLimit" Datatype="Real" /><Member Name="MinimumOnTime" Datatype="Real" /><Member Name="MinimumOffTime" Datatype="Real" /><Member Name="InputScaling" Datatype="PID_Scaling" Version="1.2"><Sections><Section Name="None"><Member Name="UpperPointIn" Datatype="Real" /><Member Name="LowerPointIn" Datatype="Real" /><Member Name="UpperPointOut" Datatype="Real" /><Member Name="LowerPointOut" Datatype="Real" /></Section></Sections></Member></Section></Sections></Member><Member Name="CycleTime" Datatype="PID_CycleTime" Version="1.2"><Sections><Section Name="None"><Member Name="StartEstimation" Datatype="Bool" /><Member Name="EnEstimation" Datatype="Bool" /><Member Name="EnMonitoring" Datatype="Bool" /><Member Name="Value" Datatype="Real" /></Section></Sections></Member><Member Name="CtrlParamsBackUp" Datatype="PID_CompactControlParams" Version="1.2"><Sections><Section Name="None"><Member Name="Gain" Datatype="Real" /><Member Name="Ti" Datatype="Real" /><Member Name="Td" Datatype="Real" /><Member Name="TdFiltRatio" Datatype="Real" /><Member Name="PWeighting" Datatype="Real" /><Member Name="DWeighting" Datatype="Real" /><Member Name="Cycle" Datatype="Real" /></Section></Sections></Member><Member Name="PIDSelfTune" Datatype="PID_CompactSelfTune" Version="1.2"><Sections><Section Name="None"><Member Name="SUT" Datatype="PID_Compact_SUT" Version="1.2"><Sections><Section Name="None"><Member Name="CalculateParams" Datatype="Bool" /><Member Name="TuneRule" Datatype="Int" /><Member Name="State" Datatype="Int" /></Section></Sections></Member><Member Name="TIR" Datatype="PID_Compact_TIR" Version="1.2"><Sections><Section Name="None"><Member Name="RunIn" Datatype="Bool" /><Member Name="CalculateParams" Datatype="Bool" /><Member Name="TuneRule" Datatype="Int" /><Member Name="State" Datatype="Int" /></Section></Sections></Member></Section></Sections></Member><Member Name="PIDCtrl" Datatype="PID_CompactControl" Version="1.2"><Sections><Section Name="None"><Member Name="PIDInit" Datatype="Bool" /><Member Name="IntegralSum" Datatype="Real" /></Section></Sections></Member><Member Name="Retain" Datatype="PID_CompactRetain" Version="1.2"><Sections><Section Name="None"><Member Name="CtrlParams" Datatype="PID_CompactControlParams" Version="1.2"><Sections><Section Name="None"><Member Name="Gain" Datatype="Real" /><Member Name="Ti" Datatype="Real" /><Member Name="Td" Datatype="Real" /><Member Name="TdFiltRatio" Datatype="Real" /><Member Name="PWeighting" Datatype="Real" /><Member Name="DWeighting" Datatype="Real" /><Member Name="Cycle" Datatype="Real" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
   </Section>
   <Section Name="Temp" />
   <Section Name="Constant" />
@@ -94,9 +95,9 @@
         <Component Name="motorPower [%]" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="LocalVariable" UId="22">
       <Symbol>
-        <Component Name="AOutput_2" />
+        <Component Name="output_motorPower [int]" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
@@ -233,38 +234,122 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
-  <Access Scope="LocalVariable" UId="21">
-    <Symbol UId="22">
-      <Component Name="output_startMotor" UId="23" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="24" />
-  <Token Text=":=" UId="25" />
-  <Blank Num="1" UId="26" />
-  <Access Scope="LocalVariable" UId="27">
-    <Symbol UId="28">
-      <Component Name="startMotor" UId="29" />
-    </Symbol>
-  </Access>
-  <Token Text=";" UId="30" />
-  <NewLine Num="1" UId="31" />
-  <Access Scope="LocalVariable" UId="32">
-    <Symbol UId="33">
-      <Component Name="output_valve" UId="34" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="35" />
-  <Token Text=":=" UId="36" />
-  <Blank Num="1" UId="37" />
-  <Access Scope="LocalVariable" UId="38">
-    <Symbol UId="39">
-      <Component Name="valve" UId="40" />
-    </Symbol>
-  </Access>
-  <Token Text=";" UId="41" />
-</StructuredText></NetworkSource>
-          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>100.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="pressure [mbar]" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="motorPower [%]" />
+      </Symbol>
+    </Access>
+    <Part Name="PID_Compact" Version="2.3" UId="24">
+      <Instance Scope="LocalVariable" UId="25">
+        <Component Name="PID_compact" />
+      </Instance>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="44">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="Setpoint" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="Input" />
+    </Wire>
+    <Wire UId="47">
+      <OpenCon UId="26" />
+      <NameCon UId="24" Name="Input_PER" />
+    </Wire>
+    <Wire UId="48">
+      <OpenCon UId="27" />
+      <NameCon UId="24" Name="Disturbance" />
+    </Wire>
+    <Wire UId="49">
+      <OpenCon UId="28" />
+      <NameCon UId="24" Name="ManualEnable" />
+    </Wire>
+    <Wire UId="50">
+      <OpenCon UId="29" />
+      <NameCon UId="24" Name="ManualValue" />
+    </Wire>
+    <Wire UId="51">
+      <OpenCon UId="30" />
+      <NameCon UId="24" Name="ErrorAck" />
+    </Wire>
+    <Wire UId="52">
+      <OpenCon UId="31" />
+      <NameCon UId="24" Name="Reset" />
+    </Wire>
+    <Wire UId="53">
+      <OpenCon UId="32" />
+      <NameCon UId="24" Name="ModeActivate" />
+    </Wire>
+    <Wire UId="54">
+      <OpenCon UId="33" />
+      <NameCon UId="24" Name="Mode" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="24" Name="ScaledInput" />
+      <OpenCon UId="34" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="24" Name="Output" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="24" Name="Output_PER" />
+      <OpenCon UId="35" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="24" Name="Output_PWM" />
+      <OpenCon UId="36" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="24" Name="SetpointLimit_H" />
+      <OpenCon UId="37" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="24" Name="SetpointLimit_L" />
+      <OpenCon UId="38" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="24" Name="InputWarning_H" />
+      <OpenCon UId="39" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="24" Name="InputWarning_L" />
+      <OpenCon UId="40" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="24" Name="State" />
+      <OpenCon UId="41" />
+    </Wire>
+    <Wire UId="64">
+      <NameCon UId="24" Name="Error" />
+      <OpenCon UId="42" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="24" Name="ErrorBits" />
+      <OpenCon UId="43" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="9" CompositionName="Comment">
@@ -282,6 +367,104 @@
               <MultilingualTextItem ID="C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="LocalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="output_motorPower [int]" UId="25" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="26" />
+  <Token Text="&gt;" UId="27" />
+  <Blank Num="1" UId="28" />
+  <Access Scope="LiteralConstant" UId="29">
+    <Constant UId="30">
+      <ConstantValue UId="32">30.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text="THEN" UId="34" />
+  <NewLine Num="1" UId="35" />
+  <Blank Num="4" UId="36" />
+  <Access Scope="LocalVariable" UId="37">
+    <Symbol UId="38">
+      <Component Name="output_startMotor" UId="39" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="40" />
+  <Token Text=":=" UId="41" />
+  <Blank Num="1" UId="42" />
+  <Access Scope="LiteralConstant" UId="43">
+    <Constant UId="44">
+      <ConstantValue UId="46">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="47" />
+  <NewLine Num="1" UId="48" />
+  <Token Text="ELSE" UId="49" />
+  <NewLine Num="1" UId="50" />
+  <Blank Num="4" UId="51" />
+  <Access Scope="LocalVariable" UId="52">
+    <Symbol UId="53">
+      <Component Name="output_startMotor" UId="54" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="55" />
+  <Token Text=":=" UId="56" />
+  <Blank Num="1" UId="57" />
+  <Access Scope="LiteralConstant" UId="58">
+    <Constant UId="59">
+      <ConstantValue UId="61">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="62" />
+  <NewLine Num="1" UId="63" />
+  <Token Text="END_IF" UId="64" />
+  <Token Text=";" UId="65" />
+  <NewLine Num="2" UId="66" />
+  <Access Scope="LocalVariable" UId="67">
+    <Symbol UId="68">
+      <Component Name="output_valve" UId="69" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="70" />
+  <Token Text=":=" UId="71" />
+  <Blank Num="1" UId="72" />
+  <Access Scope="LiteralConstant" UId="73">
+    <Constant UId="74">
+      <ConstantValue UId="76">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="77" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
                   <Text>Output_control</Text>
                 </AttributeList>
               </MultilingualTextItem>
@@ -289,9 +472,9 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="D" CompositionName="Title">
+      <MultilingualText ID="12" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="E" CompositionName="Items">
+          <MultilingualTextItem ID="13" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
