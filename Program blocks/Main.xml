@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2023-05-31T11:23:33.4647877Z</Created>
+    <Created>2023-05-31T13:04:07.3155052Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -96,7 +96,7 @@
     <Access Scope="GlobalVariable" UId="24">
       <Symbol>
         <Component Name="DB_GlobalData" />
-        <Component Name="Flow [l/h]" />
+        <Component Name="level [l]" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
@@ -123,13 +123,13 @@
       </CallInfo>
     </Call>
     <Call UId="29">
-      <CallInfo Name="FC_Flowmåler Festo Edukit PA" BlockType="FC">
+      <CallInfo Name="FC_Levelmåler Festo Edukit PA" BlockType="FC">
         <Parameter Name="Analog_input" Section="Input" Type="Int" />
-        <Parameter Name="Flow [l/h]" Section="Output" Type="Real" />
+        <Parameter Name="level [l]" Section="Output" Type="Real" />
       </CallInfo>
     </Call>
     <Call UId="30">
-      <CallInfo Name="FC_Pressure Festo Edukit PA_1" BlockType="FC">
+      <CallInfo Name="FC_Pressuremåler Festo Edukit PA" BlockType="FC">
         <Parameter Name="Analog_input" Section="Input" Type="Int" />
         <Parameter Name="pressure [mbar]" Section="Output" Type="Real" />
         <Parameter Name="pressure [psi]" Section="Output" Type="Real" />
@@ -156,7 +156,7 @@
       <NameCon UId="29" Name="Analog_input" />
     </Wire>
     <Wire UId="35">
-      <NameCon UId="29" Name="Flow [l/h]" />
+      <NameCon UId="29" Name="level [l]" />
       <IdentCon UId="24" />
     </Wire>
     <Wire UId="36">
