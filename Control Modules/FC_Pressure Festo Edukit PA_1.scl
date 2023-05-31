@@ -1,4 +1,4 @@
-﻿FUNCTION "FC_Pressure Festo Edukit PA_1" : Void
+﻿FUNCTION "FC_Pressuremåler Festo Edukit PA_1" : Void
 { S7_Optimized_Access := 'TRUE' }
 VERSION : 0.1
    VAR_INPUT 
