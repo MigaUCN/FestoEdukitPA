@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2023-05-31T13:25:21.8623061Z</Created>
+    <Created>2023-05-31T14:08:47.8492863Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -75,78 +75,7 @@
       </MultilingualText>
       <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="AInput_0" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="AInput_1" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
-      <Symbol>
-        <Component Name="Output_2" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="AOutput_2" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="25">
-      <Symbol>
-        <Component Name="Output_0" />
-      </Symbol>
-    </Access>
-    <Call UId="26">
-      <CallInfo Name="FB_Unit_EDUKIT_PA_Control" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="27">
-          <Component Name="FB_Unit_EDUKIT_PA_Control_DB" />
-        </Instance>
-        <Parameter Name="Ainput_0" Section="Input" Type="Int" />
-        <Parameter Name="Ainput_1" Section="Input" Type="Int" />
-        <Parameter Name="Ainput_2" Section="Input" Type="Int" />
-        <Parameter Name="output_startMotor" Section="Output" Type="Bool" />
-        <Parameter Name="output_motorPower [%]" Section="Output" Type="Real" />
-        <Parameter Name="output_valve" Section="Output" Type="Bool" />
-      </CallInfo>
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="29">
-      <Powerrail />
-      <NameCon UId="26" Name="en" />
-    </Wire>
-    <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="26" Name="Ainput_0" />
-    </Wire>
-    <Wire UId="31">
-      <IdentCon UId="22" />
-      <NameCon UId="26" Name="Ainput_1" />
-    </Wire>
-    <Wire UId="32">
-      <OpenCon UId="28" />
-      <NameCon UId="26" Name="Ainput_2" />
-    </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="output_startMotor" />
-      <IdentCon UId="23" />
-    </Wire>
-    <Wire UId="34">
-      <NameCon UId="26" Name="output_motorPower [%]" />
-      <IdentCon UId="24" />
-    </Wire>
-    <Wire UId="35">
-      <NameCon UId="26" Name="output_valve" />
-      <IdentCon UId="25" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
+          <NetworkSource />
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
